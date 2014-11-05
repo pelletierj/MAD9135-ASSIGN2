@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Podcast App</title>
+    </head>
+    <body>
+        <div class="app">
+            <div class="app">
+            <div id = "menu">
+                <header>
+                    <h1>PodPro</h1>
+                    <img id = "refresh" class="pushLeft" src="img/refresh.svg">
+                    <img id = "playerButton" src="img/play.svg">
+                    <img id = "addButton" class=" pushRight" src="img/plus.svg">
+                </header>
+                
+                <div id="contentList">
+                
+                </div>
+            </div>
+                
+                
+            <div id = "player" class = "hidden">
+                <header>
+                    <h1>Player</h1>
+                    <img class = "back pushLeft" src="img/arrow-left.svg">
+                </header>
+                
+                <div id="playerImage">
+                    <img id="backgroundImage" src="img/appIcon_grey.png"/>
+                    <img id="forgroundImage" src="img/appIcon_grey.png"/>
+                </div>
+            
+                <div id="playerControls">
+                    <img src="img/playButton.svg" id = "play" />
+                    <img class="hidden" src="img/pauseButton.svg" id = "pause"/>
+                    <img src="img/stopButton.svg" id = "stop" />
+                    <img src="img/rewindButton.svg" id = "reverse"/>
+                    <img src="img/fastButton.svg" id = "skip" />
+                    
+                    
+                    <div class="seekbar">
+                        <input type="range" value="38" />
+                        <div class="seekbar-progress">
+                            <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class = "time">
+                        <h2>
+                            <span id = "progressHours"></span><span id = "progressMinutes">00:</span><span id = "progressSeconds">00</span>/<span id = "durationHours"></span><span id = "durationMinutes">00:</span><span id = "durationSeconds">00</span>
+                        </h2>
+                    </div>
+                    
+                </div>
+                
+                
+                
+            </div>
+                
+            <div id = "addPage" class = "hidden">
+                <header>
+                    <h1>Add</h1>
+                    <img class = "back pushLeft" src="img/arrow-left.svg">
+                </header>
+                
+                <div class="group" id="urlInput">      
+                  <input id="addPodcastText" type="url" value="" required>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label id="urlLabel">Podcast URL</label>
+                </div>
+                
+                <input id="addPodcastButton" type="submit" value="Add Podcast">
+                
+                <h3 class="presetTitle">Our Recommendations:</h3>
+                <div>
+                    <img class="presetPods" data-link="http://feeds.twit.tv/aaa.xml" src="img/AAA.jpg"/>
+                    <img class="presetPods" data-link="http://feeds.twit.tv/tnt.xml" src="img/tnt1400videohi.jpg" />
+                    <img class="presetPods" data-link="http://feeds.twit.tv/twit.xml" src="img/twit300.jpg" />
+                    <img class="presetPods" data-link="http://feeds.twit.tv/arena.xml" src="img/arena1400audio.jpg"/>
+                    <img class="presetPods" data-link="http://feeds.twit.tv/byb.xml" src="img/mza_5927457347812045769.170x170-75.jpg" />
+                    <img class="presetPods" data-link="http://feeds.twit.tv/tn2n.xml" src="img/tn2n1400audio.jpg" />
+                </div>
+                
+            </div>
+        </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

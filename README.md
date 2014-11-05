@@ -1,6 +1,12 @@
-MAD9135-ASSIGN2
-===============
+MAD9135
+=======
 
-MAD9135 Assignment 2: Android App
+Podcast app
+=======
 
-Group Members
+Students
+========
+
+Joey Pelletier
+
+Chad Maron
